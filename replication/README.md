@@ -59,4 +59,11 @@ global
                 ├── useData _________│ Boolean │
                 └── useBefore _______│ Boolean │
 ```
-Table Test
+###Table Test
+| Node Name              | Datatype | Description |
+| :--------------------- | :------- | :---------- |
+| global                 | Object   | 
+| ├── node               | String   | Application node name |
+| ├── logger             | Object   | Defines Logging Level. Default level is INFO. |
+| │   ├── showDateTime   | Boolean  | On/Off the ability to display date and time.
+| │   └── kafka          | String   | Logging Level of Kafka broker. Possible values: trace, debug, warn, error, off, info.
