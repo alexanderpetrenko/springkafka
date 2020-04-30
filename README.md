@@ -9,10 +9,3 @@ For further reference, please consider the following sections:
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/maven-plugin/)
 * [Spring for Apache Kafka](https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/reference/htmlsingle/#boot-features-kafka)
-
-| Node Name   | Datatype |  Description |
-|-------------|:---------|:-------------|
-| global      | Object   |                       |
-| \|--node    | String   | Application node name |
-| \|--logger  | Object   |              |
-|     \|--showDateTime | Boolean | On/off tha ability to display date and time. |
