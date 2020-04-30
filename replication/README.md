@@ -8,7 +8,7 @@
 ````
 global
 ├── node ____________________________│ String  │ Application node name
-├── logger __________________________│ Object  │ Defines Logging Level. Default level is INFO.
+├─> logger __________________________│ Object  │ Defines Logging Level. Default level is INFO.
 │   ├── showDateTime ________________│ Boolean │ On/Off the ability to display date and time.
 │   ├── logDateTimeFormat ___________│ String  │ Output format of date and time.
 │   ├── default _____________________│ String  │ Logging Level of all application. Possible values: trace, debug, warn, error, off, info.
@@ -20,37 +20,37 @@ global
 ├── maxBatchSize ____________________│ Integer │ Maximal batch size of the application.
 ├── maxBufferSize ___________________│ Integer │ Maximal buffer size of the application.
 ├── waitForCDCafterInit _____________│ Boolean │ On/off the pause between Initial Load and Tracking Data Changes stages.
-└── defaults ________________________│ Object  │
-    ├── connections _________________│ Object  │
+└─> defaults ________________________│ Object  │
+    ├─> connections _________________│ Object  │
     │   ├── queryDebug ______________│ Boolean │
     │   ├── queryTimeout ____________│ Integer │
     │   └── maxConnections __________│ Integer │
-    ├── source ______________________│ Object  │
+    ├─> source ______________________│ Object  │
     │   ├── mode ____________________│ String  │ Possible values: REPLICATION, DBO, CDC
     │   ├── connection ______________│ String  │
     │   ├── snapshot ________________│ String  │
     │   ├── bufferSize ______________│ Integer │
-    │   ├── dbo _____________________│ Object  │
+    │   ├─> dbo _____________________│ Object  │
     │   │   ├── schema ______________│ String  │
     │   │   ├── saveSkipOffset ______│ Boolean │
     │   │   ├── ignoreDuplicateKey __│ Boolean │
     │   │   ├── scrollInsensitive ___│ Boolean │
     │   │   └── scrollInsensitive ___│ String  │ Possible values: NONE, INCREMENTAL, TIMESTAMP, UNIQUE
-    │   └── cdc _____________________│ Object  │
+    │   └─> cdc _____________________│ Object  │
     │       ├── schema ______________│ String  │
     │       ├── interval ____________│ Integer │
     │       └── epoch _______________│ Boolean │
-    └── destination _________________│ Object  │
-        ├── postgresql ______________│ Object  │
+    └─> destination _________________│ Object  │
+        ├─> postgresql ______________│ Object  │
         │   ├── schema ______________│ String  │
         │   ├── connection __________│ String  │
         │   └── batchSize ___________│ Integer │
-        └── kafka ___________________│ Object  │
+        └─> kafka ___________________│ Object  │
             ├── connection __________│ String  │
             ├── transactionalId _____│ Integer │
             ├── transactionalPrefix _│ String  │
             ├── batchSize ___________│ Integer │
-            └── message _____________│ Object  │
+            └─> message _____________│ Object  │
                 ├── meta ____________│ String  │
                 ├── data ____________│ String  │
                 ├── before __________│ String  │
@@ -62,20 +62,20 @@ global
 
 ### Table Test
 
-| Node Name                                     | Datatype | Description |
-| :-------------------------------------------- | :------- | :---------- |
-| global                                        | Object   | 
-| ├─ node                                       | String   | Application node name |
-| ├─ logger                                     | Object   | Defines Logging Level. Default level is INFO. |
-| │&nbsp;&nbsp;&nbsp;&nbsp;├─ showDateTime      | Boolean  | On/Off the ability to display date and time.
-| │&nbsp;&nbsp;&nbsp;&nbsp;├─ logDateTimeFormat | String   | Output format of date and time.|
-| │&nbsp;&nbsp;&nbsp;&nbsp;├─ default           | String   | Logging Level of all application. Possible values: trace, debug, warn, error, off, info.|
-| │&nbsp;&nbsp;&nbsp;&nbsp;├─ jetty             | String   | Logging Level of API server. Possible values: trace, debug, warn, error, off, info.|
-| │&nbsp;&nbsp;&nbsp;&nbsp;├─ sqlserver         | String   | Logging Level of Microsoft SQL Server. Possible values: trace, debug, warn, error, off, info.|
-| │&nbsp;&nbsp;&nbsp;&nbsp;├─ postgresql        | String   | Logging Level of PostgreSQL. Possible values: trace, debug, warn, error, off, info.|
-| │&nbsp;&nbsp;&nbsp;&nbsp;└─ kafka             | String   | Logging Level of Kafka broker. Possible values: trace, debug, warn, error, off, info.
-| ├─ shutdownTimeoutSec                         | Integer  | Timeout for graceful shutdown in seconds. |
-| ├─ maxBatchSize                               | Integer  | Maximal batch size of the application. |
-| ├─ maxBufferSize                              | Integer  | Maximal buffer size of the application. |
-| ├─ waitForCDCafterInit                        | Boolean  | On/off the pause between Initial Load and Tracking Data Changes stages. |
-| └─ defaults                                   | Object   | |
+| Node Name                                    | Datatype | Description |
+| :------------------------------------------- | :------- | :---------- |
+| global                                       | Object   | 
+| ├─node                                       | String   | Application node name |
+| ├>logger                                     | Object   | Defines Logging Level. Default level is INFO. |
+| │&nbsp;&nbsp;&nbsp;&nbsp;├─showDateTime      | Boolean  | On/Off the ability to display date and time.
+| │&nbsp;&nbsp;&nbsp;&nbsp;├─logDateTimeFormat | String   | Output format of date and time.|
+| │&nbsp;&nbsp;&nbsp;&nbsp;├─default           | String   | Logging Level of all application. Possible values: trace, debug, warn, error, off, info.|
+| │&nbsp;&nbsp;&nbsp;&nbsp;├─jetty             | String   | Logging Level of API server. Possible values: trace, debug, warn, error, off, info.|
+| │&nbsp;&nbsp;&nbsp;&nbsp;├─sqlserver         | String   | Logging Level of Microsoft SQL Server. Possible values: trace, debug, warn, error, off, info.|
+| │&nbsp;&nbsp;&nbsp;&nbsp;├─postgresql        | String   | Logging Level of PostgreSQL. Possible values: trace, debug, warn, error, off, info.|
+| │&nbsp;&nbsp;&nbsp;&nbsp;└─kafka             | String   | Logging Level of Kafka broker. Possible values: trace, debug, warn, error, off, info.
+| ├─shutdownTimeoutSec                         | Integer  | Timeout for graceful shutdown in seconds. |
+| ├─maxBatchSize                               | Integer  | Maximal batch size of the application. |
+| ├─maxBufferSize                              | Integer  | Maximal buffer size of the application. |
+| ├─waitForCDCafterInit                        | Boolean  | On/off the pause between Initial Load and Tracking Data Changes stages. |
+| └─defaults                                   | Object   | |
