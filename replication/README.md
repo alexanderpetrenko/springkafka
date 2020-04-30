@@ -62,20 +62,20 @@ global
 
 ### Table Test
 
-| Node Name                                    | Datatype | Description |
-| :------------------------------------------- | :------- | :---------- |
-|global                                       | Object   | 
-|├─node                                       | String   | Application node name |
-|├>logger                                     | Object   | Defines Logging Level. Default level is INFO. |
-|│&nbsp;&nbsp;&nbsp;├─showDateTime      | Boolean  | On/Off the ability to display date and time.
+| Node Name                               | Datatype | Description |
+| :---------------------------------------| :------- | :---------- |
+|global                                   | Object   | 
+|├─`node`                                 | String   | Application node name |
+|├>`logger`                               | Object   | Defines Logging Level. Default level is INFO. |
+|│&nbsp;&nbsp;&nbsp;├─`showDateTime`      | Boolean  | On/Off the ability to display date and time.
 |│&nbsp;&nbsp;&nbsp;├─`logDateTimeFormat` | String   | Output format of date and time.|
-|│&nbsp;&nbsp;&nbsp;├─default           | String   | Logging Level of all application. Possible values: trace, debug, warn, error, off, info.|
-|│&nbsp;&nbsp;&nbsp;&nbsp;├─jetty             | String   | Logging Level of API server. Possible values: trace, debug, warn, error, off, info.|
-|│&nbsp;&nbsp;&nbsp;&nbsp;├─sqlserver         | String   | Logging Level of Microsoft SQL Server. Possible values: trace, debug, warn, error, off, info.|
-|│&nbsp;&nbsp;&nbsp;&nbsp;├─postgresql        | String   | Logging Level of PostgreSQL. Possible values: trace, debug, warn, error, off, info.|
-|│&nbsp;&nbsp;&nbsp;&nbsp;└─kafka             | String   | Logging Level of Kafka broker. Possible values: trace, debug, warn, error, off, info.
-|├─`shutdownTimeoutSec`                         | Integer  | Timeout for graceful shutdown in seconds. |
-|├─maxBatchSize                               | Integer  | Maximal batch size of the application. |
-|├─maxBufferSize                              | Integer  | Maximal buffer size of the application. |
-|├─waitForCDCafterInit                        | Boolean  | On/off the pause between Initial Load and Tracking Data Changes stages. |
-|└─defaults                                   | Object   | |
+|│&nbsp;&nbsp;&nbsp;├─`default`           | String   | Logging Level of all application. Possible values: trace, debug, warn, error, off, info.|
+|│&nbsp;&nbsp;&nbsp;&nbsp;├─`jetty`       | String   | Logging Level of API server. Possible values: trace, debug, warn, error, off, info.|
+|│&nbsp;&nbsp;&nbsp;&nbsp;├─`sqlserver`   | String   | Logging Level of Microsoft SQL Server. Possible values: trace, debug, warn, error, off, info.|
+|│&nbsp;&nbsp;&nbsp;&nbsp;├─`postgresql`  | String   | Logging Level of PostgreSQL. Possible values: trace, debug, warn, error, off, info.|
+|│&nbsp;&nbsp;&nbsp;&nbsp;└─`kafka`       | String   | Logging Level of Kafka broker. Possible values: trace, debug, warn, error, off, info.
+|├─`shutdownTimeoutSec`                   | Integer  | Timeout for graceful shutdown in seconds. |
+|├─`maxBatchSize`                         | Integer  | Maximal batch size of the application. |
+|├─`maxBufferSize`                        | Integer  | Maximal buffer size of the application. |
+|├─`waitForCDCafterInit`                  | Boolean  | On/off the pause between Initial Load and Tracking Data Changes stages. |
+|└─`defaults`                             | Object   | |
