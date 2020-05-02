@@ -1,40 +1,3 @@
-<style>
-   ul.tree, ul.tree ul {
-    list-style: none;
-     margin: 0;
-     padding: 0;
-   } 
-   ul.tree ul {
-     margin-left: 10px;
-   }
-   ul.tree li {
-     margin: 0;
-     padding: 0 7px;
-     line-height: 20px;
-     color: #369;
-     font-weight: bold;
-     border-left:1px solid rgb(100,100,100);
-
-   }
-   ul.tree li:last-child {
-       border-left:none;
-   }
-   ul.tree li:before {
-      position:relative;
-      top:-0.3em;
-      height:1em;
-      width:12px;
-      color:white;
-      border-bottom:1px solid rgb(100,100,100);
-      content:"";
-      display:inline-block;
-      left:-7px;
-   }
-   ul.tree li:last-child:before {
-      border-left:1px solid rgb(100,100,100);   
-   }
-</style>
-
 # WAG / DIH SQL Replication
 ## Introduction
 **DIH SQL Replication Application** is a replication solution that enables you to increase the availability and durability of your data by sending it from Microsoft SQL Server across multiple regions: **PostgreSQL** and **Kafka Message Broker**.
@@ -121,7 +84,42 @@ global
 |&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryTimeout`   | Integer | |
 |&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└─`maxConnections` | Integer | |
 
+<style>
+   ul.tree, ul.tree ul {
+    list-style: none;
+     margin: 0;
+     padding: 0;
+   } 
+   ul.tree ul {
+     margin-left: 10px;
+   }
+   ul.tree li {
+     margin: 0;
+     padding: 0 7px;
+     line-height: 20px;
+     color: #369;
+     font-weight: bold;
+     border-left:1px solid rgb(100,100,100);
 
+   }
+   ul.tree li:last-child {
+       border-left:none;
+   }
+   ul.tree li:before {
+      position:relative;
+      top:-0.3em;
+      height:1em;
+      width:12px;
+      color:white;
+      border-bottom:1px solid rgb(100,100,100);
+      content:"";
+      display:inline-block;
+      left:-7px;
+   }
+   ul.tree li:last-child:before {
+      border-left:1px solid rgb(100,100,100);   
+   }
+</style>
 <ul class="tree">
     <li>Animals
      <ul>
