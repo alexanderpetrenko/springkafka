@@ -35,7 +35,7 @@ global
     │   │   ├── saveSkipOffset ______│ Boolean │
     │   │   ├── ignoreDuplicateKey __│ Boolean │
     │   │   ├── scrollInsensitive ___│ Boolean │
-    │   │   └── scrollInsensitive ___│ String  │ Possible values: NONE, INCREMENTAL, TIMESTAMP, UNIQUE
+    │   │   └── initialStrategy _____│ String  │ Possible values: NONE, INCREMENTAL, TIMESTAMP, UNIQUE
     │   └─> cdc _____________________│ Object  │
     │       ├── schema ______________│ String  │
     │       ├── interval ____________│ Integer │
@@ -83,3 +83,18 @@ global
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryDebug`     | Boolean | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryTimeout`   | Integer | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└─`maxConnections` | Integer | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├>`source`             | Object   | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`mode`           | String  | Possible values: REPLICATION, DBO, CDC |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`connection`     | String  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`snapshot`       | String  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`bufferSize`     | Integer | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├>`dbo`            | Object  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`schema`             | String  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`saveSkipOffset`     | Boolean | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`ignoreDuplicateKey` | Boolean | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`scrollInsensitive`  | Boolean | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└─`initialStrategy`    | String  | Possible values: NONE, INCREMENTAL, TIMESTAMP, UNIQUE |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├>`cdc`            | Object  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─`schema`              | String  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─`interval`            | String  | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─`epoch`               | Boolean | |
