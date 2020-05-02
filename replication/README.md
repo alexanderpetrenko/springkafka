@@ -79,69 +79,7 @@ global
 |├─`maxBufferSize`                        | Integer  | Maximal buffer size of the application. |
 |├─`waitForCDCafterInit`                  | Boolean  | On/off the pause between Initial Load and Tracking Data Changes stages. |
 |└>`defaults`                             | Object   | |
-|&nbsp;&nbsp;&nbsp;├>`connections`        | Object   | |
-|&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryDebug`     | Boolean | |
-|&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryTimeout`   | Integer | |
-|&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└─`maxConnections` | Integer | |
-
-<style>
-   ul.tree, ul.tree ul {
-    list-style: none;
-     margin: 0;
-     padding: 0;
-   } 
-   ul.tree ul {
-     margin-left: 10px;
-   }
-   ul.tree li {
-     margin: 0;
-     padding: 0 7px;
-     line-height: 20px;
-     color: #369;
-     font-weight: bold;
-     border-left:1px solid rgb(100,100,100);
-
-   }
-   ul.tree li:last-child {
-       border-left:none;
-   }
-   ul.tree li:before {
-      position:relative;
-      top:-0.3em;
-      height:1em;
-      width:12px;
-      color:white;
-      border-bottom:1px solid rgb(100,100,100);
-      content:"";
-      display:inline-block;
-      left:-7px;
-   }
-   ul.tree li:last-child:before {
-      border-left:1px solid rgb(100,100,100);   
-   }
-</style>
-<ul class="tree">
-    <li>Animals
-     <ul>
-      <li>Birds</li>
-      <li>Mammals
-       <ul>
-        <li>Elephant</li>
-        <li class="last">Mouse</li>
-       </ul>
-      </li>
-      <li class="last">Reptiles</li>
-     </ul>
-    </li>
-    <li class="last">Plants
-     <ul>
-      <li>Flowers
-       <ul>
-        <li>Rose</li>
-        <li class="last">Tulip</li>
-       </ul>
-      </li>
-      <li class="last">Trees</li>
-     </ul>
-    </li>
-   </ul>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├>`connections`        | Object   | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryDebug`     | Boolean | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├─`queryTimeout`   | Integer | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└─`maxConnections` | Integer | |
